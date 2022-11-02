@@ -94,42 +94,18 @@ export const FALLBACK_URLS: { [key in SupportedChainId]: string[] } = {
  * These are the URLs used by the interface when there is not another available source of chain data.
  */
 export const RPC_URLS: { [key in SupportedChainId]: string[] } = {
-  [SupportedChainId.MAINNET]: [
-    `https://mainnet.infura.io/v3/${INFURA_KEY}`,
-    ...FALLBACK_URLS[SupportedChainId.MAINNET],
-  ],
-  [SupportedChainId.RINKEBY]: [
-    `https://rinkeby.infura.io/v3/${INFURA_KEY}`,
-    ...FALLBACK_URLS[SupportedChainId.RINKEBY],
-  ],
-  [SupportedChainId.ROPSTEN]: [
-    `https://ropsten.infura.io/v3/${INFURA_KEY}`,
-    ...FALLBACK_URLS[SupportedChainId.ROPSTEN],
-  ],
-  [SupportedChainId.GOERLI]: [`https://goerli.infura.io/v3/${INFURA_KEY}`, ...FALLBACK_URLS[SupportedChainId.GOERLI]],
-  [SupportedChainId.KOVAN]: [`https://kovan.infura.io/v3/${INFURA_KEY}`, ...FALLBACK_URLS[SupportedChainId.KOVAN]],
-  [SupportedChainId.OPTIMISM]: [
-    `https://optimism-mainnet.infura.io/v3/${INFURA_KEY}`,
-    ...FALLBACK_URLS[SupportedChainId.OPTIMISM],
-  ],
-  [SupportedChainId.OPTIMISM_GOERLI]: [
-    `https://optimism-goerli.infura.io/v3/${INFURA_KEY}`,
-    ...FALLBACK_URLS[SupportedChainId.OPTIMISM_GOERLI],
-  ],
-  [SupportedChainId.ARBITRUM_ONE]: [
-    `https://arbitrum-mainnet.infura.io/v3/${INFURA_KEY}`,
-    ...FALLBACK_URLS[SupportedChainId.ARBITRUM_ONE],
-  ],
-  [SupportedChainId.ARBITRUM_RINKEBY]: [
-    `https://arbitrum-rinkeby.infura.io/v3/${INFURA_KEY}`,
-    ...FALLBACK_URLS[SupportedChainId.ARBITRUM_RINKEBY],
-  ],
-  [SupportedChainId.POLYGON]: [
-    `https://polygon-mainnet.infura.io/v3/${INFURA_KEY}`,
-    ...FALLBACK_URLS[SupportedChainId.POLYGON],
-  ],
+  [SupportedChainId.MAINNET]: [...FALLBACK_URLS[SupportedChainId.MAINNET]],
+  [SupportedChainId.RINKEBY]: [...FALLBACK_URLS[SupportedChainId.RINKEBY]],
+  [SupportedChainId.ROPSTEN]: [...FALLBACK_URLS[SupportedChainId.ROPSTEN]],
+  [SupportedChainId.GOERLI]: [...FALLBACK_URLS[SupportedChainId.GOERLI]],
+  [SupportedChainId.KOVAN]: [...FALLBACK_URLS[SupportedChainId.KOVAN]],
+  [SupportedChainId.OPTIMISM]: [...FALLBACK_URLS[SupportedChainId.OPTIMISM]],
+  [SupportedChainId.OPTIMISM_GOERLI]: [...FALLBACK_URLS[SupportedChainId.OPTIMISM_GOERLI]],
+  [SupportedChainId.ARBITRUM_ONE]: [...FALLBACK_URLS[SupportedChainId.ARBITRUM_ONE]],
+  [SupportedChainId.ARBITRUM_RINKEBY]: [...FALLBACK_URLS[SupportedChainId.ARBITRUM_RINKEBY]],
+  [SupportedChainId.POLYGON]: [...FALLBACK_URLS[SupportedChainId.POLYGON]],
   [SupportedChainId.POLYGON_MUMBAI]: [
-    `https://polygon-mumbai.infura.io/v3/${INFURA_KEY}`,
+    `https://polygon-node-testing.tokeny.com/${process.env.REACT_APP_TOKENY_NODE_KEY}`,
     ...FALLBACK_URLS[SupportedChainId.POLYGON_MUMBAI],
   ],
   [SupportedChainId.CELO]: FALLBACK_URLS[SupportedChainId.CELO],
