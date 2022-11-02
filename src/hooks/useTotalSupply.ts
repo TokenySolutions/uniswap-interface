@@ -9,7 +9,11 @@ import { useTokenContract } from './useContract'
 export function useTotalSupply(token?: Currency): CurrencyAmount<Token> | undefined {
   const contract = useTokenContract(token?.isToken ? token.address : undefined, false)
 
+  console.log('useTotalSupply.token', { token })
+
   const totalSupplyStr: string | undefined = useSingleCallResult(contract, 'totalSupply')?.result?.[0]?.toString()
+
+  console.log('useTotalSupply', totalSupplyStr)
 
   return useMemo(
     () => (token?.isToken && totalSupplyStr ? CurrencyAmount.fromRawAmount(token, totalSupplyStr) : undefined),
