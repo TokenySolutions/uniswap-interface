@@ -8,7 +8,7 @@ type AddressMap = { [chainId: number]: string }
 export const UNI_ADDRESS: AddressMap = constructSameAddressMap('0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984')
 
 export const V2_FACTORY_ADDRESSES: AddressMap = constructSameAddressMap('0xFE0fBB0194350fcdFF874b1eBb9d1f28Df3acF6A')
-export const V2_ROUTER_ADDRESS: AddressMap = constructSameAddressMap('0x17D62ef0E90cFcF774A2B4f2375797e588163F72')
+export const V2_ROUTER_ADDRESS: AddressMap = constructSameAddressMap('0x1Dd2e5daE8f982ec47bf4190934e39A5760c6a12')
 
 // celo v3 addresses
 const CELO_V3_CORE_FACTORY_ADDRESSES = '0xAfE208a311B21f13EF87E33A90049fC17A7acDEc'
@@ -58,7 +58,7 @@ export const MULTICALL_ADDRESS: AddressMap = {
 }
 
 export const SWAP_ROUTER_ADDRESSES: AddressMap = {
-  ...constructSameAddressMap('0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45', [
+  ...constructSameAddressMap('0x1Dd2e5daE8f982ec47bf4190934e39A5760c6a12', [
     SupportedChainId.OPTIMISM,
     SupportedChainId.OPTIMISM_GOERLI,
     SupportedChainId.ARBITRUM_ONE,
